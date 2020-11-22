@@ -18,6 +18,7 @@ public class MyArrayList<T> implements IMyArrayList<T> {
      */
     // FIXME возвращает null если в ячейке не лежит значение (возвращать null - плохо).
     // FIXME метод может генериовать IndexOutOfBoundsException, но оператора throws нет!
+    // FIXME проверку индекса нужно вынести в отдельный метод.
     public T getItem(int index) {
         if (index < 0 || index >= listArray.length)
             throw new IndexOutOfBoundsException("Индекс за пределами массива");
